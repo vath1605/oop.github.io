@@ -11,9 +11,9 @@
         }
 
         public function display(){
-            echo '<h1>'.$this->id.'</h1>';
-            echo '<h1>'.$this->name.'</h1>';
-            echo '<h1>'.$this->gender.'</h1>';
+            echo '<h1>ID: '.$this->id.'</h1>';
+            echo '<h1>Name: '.$this->name.'</h1>';
+            echo '<h1>Gender: '.$this->gender.'</h1>';
         }
     }
 ?>

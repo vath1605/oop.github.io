@@ -5,19 +5,18 @@
         private $grade;
 
         public function __construct($id, $name, $gender,$score,$grade){
-            $this->id = $id;
-            $this->name = $name;
-            $this->gender = $gender;
+            parent::__construct($id,$name,$gender);
             $this->score = $score;
             $this->grade = $grade;
         }
 
         public function display(){
-            echo '<h1>'.$this->id.'</h1>';
-            echo '<h1>'.$this->name.'</h1>';
-            echo '<h1>'.$this->gender.'</h1>';
-            echo '<h1>'.$this->score.'</h1>';
-            echo '<h1>'.$this->grade.'</h1>';
+            parent::display();
+            echo '<h1>Score: '.$this->score.'</h1>';
+            echo '<h1>Grade: '.$this->grade.'</h1>';
         }
     }
+
+    $student = new Student(101,'Dara','Male',90,'B');
+    $student -> display();
 ?>
